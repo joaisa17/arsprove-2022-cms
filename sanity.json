@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "project": {
+    "name": "Årsprøve 2022"
+  },
+  "api": {
+    "projectId": "iw5ozyig",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/index.js"
+    },
+
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./desk/index.js"
+    }
+  ]
+}
